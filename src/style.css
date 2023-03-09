@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Tajawal&display=swap');
 
 body {
   margin: 0;
@@ -35,11 +35,12 @@ body {
   min-height: 70vh;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 30px 30px 30px 100px 75px 50px 30px 30px;
+  grid-template-rows: 50px 50px 80px 40px 100px 75px 50px 30px 30px;
   grid-template-areas:
     'biz nav'
-    '. heroPhoto'
+    '. .'
     'name heroPhoto'
+    'nameArt heroPhoto'
     'splashMessage heroPhoto'
     'paragraph heroPhoto'
     'order heroPhoto'
@@ -69,10 +70,6 @@ body {
 }
 
 .nav-button::after {
-  /* color: #ed3c20;
-  border-bottom: 2px solid black;
-  padding-bottom: 5px; */
-  cursor: pointer;
   content: '';
   position: absolute;
   width: 100%;
@@ -86,8 +83,6 @@ body {
 }
 
 .nav-button:hover::after {
-  /* color: #ed3c20;
-  padding-bottom: 5px; */
   transform: scaleX(1);
   transform-origin: bottom left;
   cursor: pointer;
@@ -97,4 +92,27 @@ body {
   color: #ed3c20;
   padding-bottom: 5px;
   cursor: pointer;
+}
+
+.main-photo {
+  grid-area: heroPhoto;
+  border-radius: 25px;
+  max-height: 500px;
+  display: flex;
+  justify-self: center;
+  /* align-self: center; */
+}
+
+.name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 38px;
+  color: #ed3c20;
+  grid-area: name;
+}
+
+.name-art {
+  height: 35px;
+  width: 100px;
+  padding: 20px;
+  grid-area: nameArt;
 }

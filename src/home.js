@@ -1,5 +1,7 @@
 import './style.css';
 import Logo from './img/chicken-art.jpg';
+import bigChicken from './img/big-chicken-art.jpg';
+import squig from './img/squiggly-line.png';
 
 export default function initHome() {
   const contentDiv = document.getElementById('content');
@@ -31,10 +33,22 @@ export default function initHome() {
 
   navDiv.append(homeNav, menuNav, storyNav, contactNav);
 
+  const mainPhoto = new Image();
+  mainPhoto.src = bigChicken;
+  mainPhoto.classList.add('main-photo');
+
+  const bigName = document.createElement('p');
+  bigName.textContent = "Jodii's wings";
+  bigName.classList.add('name');
+
+  const squigLine = new Image();
+  squigLine.src = squig;
+  squigLine.classList.add('name-art');
+
   frame.id = 'case';
   mainPage.classList.add('main');
 
-  mainPage.append(bizLogo, navDiv);
+  mainPage.append(bizLogo, navDiv, mainPhoto, bigName, squigLine);
   frame.appendChild(mainPage);
   contentDiv.appendChild(frame);
 }
