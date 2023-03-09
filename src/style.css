@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Tajawal', sans-serif;
+}
+
+#content {
+  background-color: #ed3c20;
+  padding: 50px;
+  margin: 0;
+  height: 88.5vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#case {
+  border: 2px solid #ebe0ce;
+  border-radius: 30px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  width: 90%;
+}
+
+.main {
+  background-color: #ebe0ce;
+  border-radius: 30px;
+  padding: 30px;
+  display: grid;
+  min-height: 70vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 30px 30px 30px 100px 75px 50px 30px 30px;
+  grid-template-areas:
+    'biz nav'
+    '. heroPhoto'
+    'name heroPhoto'
+    'splashMessage heroPhoto'
+    'paragraph heroPhoto'
+    'order heroPhoto'
+    '. heroPhoto'
+    'socials socials';
+}
+
+.biz {
+  grid-area: biz;
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
+  align-self: center;
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.nav-button {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-button::after {
+  /* color: #ed3c20;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px; */
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-button:hover::after {
+  /* color: #ed3c20;
+  padding-bottom: 5px; */
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: #ed3c20;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
