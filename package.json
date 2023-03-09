@@ -1,0 +1,37 @@
+{
+  "name": "odin-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WavyBoyJodii/odin-restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WavyBoyJodii/odin-restaurant/issues"
+  },
+  "homepage": "https://github.com/WavyBoyJodii/odin-restaurant#readme",
+  "dependencies": {
+    "eslint-config-wesbos": "^3.2.3"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
