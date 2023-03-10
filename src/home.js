@@ -4,7 +4,7 @@ import Logo from './img/chicken-art.jpg';
 import bigChicken from './img/big-chicken-art.jpg';
 import squig from './img/squiggly-line.png';
 import { contentDiv, frame, mainPage } from '.';
-import { toHome, toMenu } from './unnapend';
+import { toHome, toMenu, toStory } from './unnapend';
 
 export default function initHome() {
   // const contentDiv = document.getElementById('content');
@@ -31,12 +31,9 @@ export default function initHome() {
   const storyNav = document.createElement('p');
   storyNav.textContent = 'Our Story';
   storyNav.classList.add('nav-button');
+  storyNav.addEventListener('click', toStory);
 
-  const contactNav = document.createElement('p');
-  contactNav.textContent = 'Contact Us';
-  contactNav.classList.add('nav-button');
-
-  navDiv.append(homeNav, menuNav, storyNav, contactNav);
+  navDiv.append(homeNav, menuNav, storyNav);
 
   const mainPhoto = new Image();
   mainPhoto.src = bigChicken;

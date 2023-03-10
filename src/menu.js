@@ -6,7 +6,7 @@ import bakedChickenArt from './img/baked-chicken-wings-asian-style.jpg';
 import chickenFingersArt from './img/chicken-fingers.jpg';
 import grilledChickenArt from './img/grilled-chicken.jpg';
 import tabakaChickenArt from './img/tabaka-chicken.jpg';
-import { toHome, toMenu } from './unnapend';
+import { toHome, toMenu, toStory } from './unnapend';
 
 export default function initMenu() {
   const bizLogo = new Image();
@@ -29,12 +29,9 @@ export default function initMenu() {
   const storyNav = document.createElement('p');
   storyNav.textContent = 'Our Story';
   storyNav.classList.add('nav-button');
+  storyNav.addEventListener('click', toStory);
 
-  const contactNav = document.createElement('p');
-  contactNav.textContent = 'Contact Us';
-  contactNav.classList.add('nav-button');
-
-  navDiv.append(homeNav, menuNav, storyNav, contactNav);
+  navDiv.append(homeNav, menuNav, storyNav);
 
   const food1 = document.createElement('div');
   const bakedChicken = new Image();

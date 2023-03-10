@@ -27,7 +27,7 @@ body {
   width: 90%;
 }
 
-.menu-main {
+.story-main {
   background-color: #ebe0ce;
   border-radius: 30px;
   padding: 30px;
@@ -35,12 +35,11 @@ body {
   min-height: 70vh;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px 250px 250px 30px;
+  grid-template-rows: 50px 275px 275px 30px;
   grid-template-areas:
     'biz nav'
-    '. .'
-    'food1 food2'
-    'food3 food4'
+    'photo photo'
+    'para para'
     'socials socials';
 }
 
@@ -58,6 +57,23 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
+}
+
+.chicken-photo {
+  grid-area: photo;
+  height: 200px;
+  width: auto;
+  align-self: center;
+  justify-self: center;
+}
+
+.story {
+  grid-area: para;
+  height: 300px;
+  width: 1000px;
+  align-self: center;
+  justify-self: center;
+  font-size: 22px;
 }
 
 .nav-button {
@@ -87,74 +103,6 @@ body {
 .nav-button:hover {
   color: #ed3c20;
   padding-bottom: 5px;
-  cursor: pointer;
-}
-
-.photos {
-  height: 250px;
-  width: 250px;
-}
-.food1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 150px;
-  width: 380px;
-  grid-area: food1;
-  margin: auto;
-  align-self: center;
-  align-content: center;
-}
-
-.food2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 150px;
-  width: 380px;
-  grid-area: food2;
-  margin: auto;
-  align-self: center;
-  align-content: center;
-}
-
-.food3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 150px;
-  width: 380px;
-  grid-area: food3;
-  margin: auto;
-  align-self: center;
-  align-content: center;
-}
-
-.food4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 150px;
-  width: 380px;
-  grid-area: food4;
-  margin: auto;
-  align-self: center;
-  align-content: center;
-}
-
-.orderButton {
-  color: white;
-  background-color: #ed3c20;
-  height: 60px;
-  width: 200px;
-  border-radius: 20px;
-  /* padding: 20px; */
-  font-size: 25px;
-  grid-area: order;
-  margin-top: 20px;
-}
-
-.orderButton:hover {
   cursor: pointer;
 }
 
