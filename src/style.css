@@ -35,7 +35,7 @@ body {
   min-height: 70vh;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px 80px 40px 100px 75px 50px 30px 30px;
+  grid-template-rows: 50px 50px 80px 40px 200px 100px 50px 30px 30px;
   grid-template-areas:
     'biz nav'
     '. .'
@@ -106,6 +106,7 @@ body {
 .name {
   font-family: 'Noto Serif KR', serif;
   font-size: 38px;
+  font-weight: bold;
   color: #ed3c20;
   grid-area: name;
 }
@@ -115,4 +116,74 @@ body {
   width: 100px;
   padding: 20px;
   grid-area: nameArt;
+}
+
+.splashMessage {
+  font-size: 50px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 20px;
+  grid-area: splashMessage;
+}
+
+.smallSplash {
+  font-size: 18px;
+  grid-area: paragraph;
+}
+
+.orderButton {
+  color: white;
+  background-color: #ed3c20;
+  height: 60px;
+  width: 200px;
+  border-radius: 20px;
+  /* padding: 20px; */
+  font-size: 25px;
+  grid-area: order;
+  margin-top: 20px;
+}
+
+.orderButton:hover {
+  cursor: pointer;
+}
+
+.social-nav {
+  grid-area: socials;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+}
+
+.social-nav-button {
+  display: inline-block;
+  position: relative;
+  color: #ed3c20;
+}
+
+.social-nav-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.social-nav-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  cursor: pointer;
+}
+
+.social-nav-button:hover {
+  color: black;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
