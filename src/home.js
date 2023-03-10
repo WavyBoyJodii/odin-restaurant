@@ -1,12 +1,15 @@
 import './style.css';
+import './style2.css';
 import Logo from './img/chicken-art.jpg';
 import bigChicken from './img/big-chicken-art.jpg';
 import squig from './img/squiggly-line.png';
+import { contentDiv, frame, mainPage } from '.';
+import { toHome, toMenu } from './unnapend';
 
 export default function initHome() {
-  const contentDiv = document.getElementById('content');
-  const frame = document.createElement('div');
-  const mainPage = document.createElement('div');
+  // const contentDiv = document.getElementById('content');
+  // const frame = document.createElement('div');
+  // const mainPage = document.createElement('div');
 
   const bizLogo = new Image();
   bizLogo.src = Logo;
@@ -18,10 +21,12 @@ export default function initHome() {
   const homeNav = document.createElement('p');
   homeNav.textContent = 'Home';
   homeNav.classList.add('nav-button');
+  homeNav.addEventListener('click', toHome);
 
   const menuNav = document.createElement('p');
   menuNav.textContent = 'Menu';
   menuNav.classList.add('nav-button');
+  menuNav.addEventListener('click', toMenu);
 
   const storyNav = document.createElement('p');
   storyNav.textContent = 'Our Story';
@@ -86,9 +91,10 @@ export default function initHome() {
 
   socialNavDiv.append(instaNav, faceNav, twitNav);
 
-  frame.id = 'case';
-  mainPage.classList.add('main');
+  // frame.id = 'case';
+  // mainPage.classList.add('main');
 
+  mainPage.classList.add('main');
   mainPage.append(
     bizLogo,
     navDiv,
@@ -102,4 +108,5 @@ export default function initHome() {
   );
   frame.appendChild(mainPage);
   contentDiv.appendChild(frame);
+  return { navDiv, splashMessage, socialNavDiv };
 }

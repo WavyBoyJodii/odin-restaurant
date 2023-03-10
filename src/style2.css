@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Tajawal&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Tajawal', sans-serif;
+}
+
+#content {
+  background-color: #ed3c20;
+  padding: 50px;
+  margin: 0;
+  height: 88.5vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#case {
+  border: 2px solid #ebe0ce;
+  border-radius: 30px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  width: 90%;
+}
+
+.menu-main {
+  background-color: #ebe0ce;
+  border-radius: 30px;
+  padding: 30px;
+  display: grid;
+  min-height: 70vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 275px 275px 30px;
+  grid-template-areas:
+    'biz nav'
+    '. .'
+    'food1 food2'
+    'food3 food4'
+    'socials socials';
+}
+
+.biz {
+  grid-area: biz;
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
+  align-self: center;
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.nav-button {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: #ed3c20;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.photos {
+  height: 250px;
+  width: 250px;
+}
+.food1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  width: 380px;
+  grid-area: food1;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+}
+
+.food2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  width: 380px;
+  grid-area: food2;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+}
+
+.food3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  width: 380px;
+  grid-area: food3;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+}
+
+.food4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  width: 380px;
+  grid-area: food4;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+}
+
+.orderButton {
+  color: white;
+  background-color: #ed3c20;
+  height: 60px;
+  width: 200px;
+  border-radius: 20px;
+  /* padding: 20px; */
+  font-size: 25px;
+  grid-area: order;
+  margin-top: 20px;
+}
+
+.orderButton:hover {
+  cursor: pointer;
+}
+
+.social-nav {
+  grid-area: socials;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+}
+
+.social-nav-button {
+  display: inline-block;
+  position: relative;
+  color: #ed3c20;
+}
+
+.social-nav-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.social-nav-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  cursor: pointer;
+}
+
+.social-nav-button:hover {
+  color: black;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
